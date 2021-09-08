@@ -45,14 +45,14 @@ const createListElement = () => {
     li.appendChild(deleteButton);
     deleteButton.addEventListener("click", () => {ul.removeChild(li)});
 
-    checkIfAllDone();
+    allDoneText.classList.add("hidden");
 }
 
 const clearList = () => {
     while (ul.firstChild) {
         ul.removeChild(ul.lastChild);
     }
-    checkIfAllDone();
+    allDoneText.classList.add("hidden");
 }
 
 // Click handler for enter button
